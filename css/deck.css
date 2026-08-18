@@ -1,13 +1,13 @@
 :root {
-  --paper: #f3ede3;
-  --paper-2: #e7dccb;
-  --ink: #1f1a16;
-  --ink-2: #3f3832;
-  --muted: #6f675e;
-  --rule: #d4c8b6;
-  --ember: #9c4328;
-  --gold: #b08956;
-  --serif: "Fraunces", "Iowan Old Style", Palatino, serif;
+  --paper: #f7f1e6;
+  --ink: #3f3830;
+  --ink-deep: #2c2621;
+  --muted: #7a7166;
+  --rule: #e0d5c4;
+  --clay: #c46a45;
+  --gold: #c4a05a;
+  --display: "Cinzel", "Times New Roman", serif;
+  --serif: "Cormorant Garamond", Palatino, serif;
   --sans: "Outfit", "Avenir Next", sans-serif;
 }
 
@@ -16,7 +16,7 @@
 html, body {
   margin: 0;
   height: 100%;
-  background: #151210;
+  background: #2c2621;
   color: var(--ink);
   font-family: var(--sans);
 }
@@ -31,8 +31,11 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem 1rem;
-  color: #d7cbb8;
-  font-size: 0.8rem;
+  color: #e7dccb;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--display);
 }
 
 .chrome a, .chrome button {
@@ -45,9 +48,12 @@ html, body {
 }
 
 .chrome button {
-  border: 1px solid #5a5046;
+  border: 1px solid #6b6258;
   padding: 0.3rem 0.65rem;
   border-radius: 999px;
+  letter-spacing: 0.06em;
+  font-family: var(--sans);
+  text-transform: none;
 }
 
 .deck {
@@ -68,15 +74,15 @@ html, body {
 .slide.active { display: flex; flex-direction: column; justify-content: center; }
 
 .slide.title-slide {
-  background: var(--ink);
+  background: #3a342c;
   color: var(--paper);
 }
 
 .kicker {
-  font-size: 0.78rem;
-  letter-spacing: 0.16em;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ember);
+  color: var(--clay);
   margin: 0 0 0.85rem;
 }
 
@@ -88,7 +94,10 @@ h1, h2 {
   letter-spacing: -0.03em;
   line-height: 1.08;
   margin: 0 0 1rem;
+  color: var(--ink-deep);
 }
+
+.title-slide h1 { color: var(--paper); }
 
 h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); max-width: 14ch; }
 h2 { font-size: clamp(2rem, 4.4vw, 3.2rem); max-width: 18ch; }
@@ -97,11 +106,11 @@ h2 { font-size: clamp(2rem, 4.4vw, 3.2rem); max-width: 18ch; }
   font-size: 1.2rem;
   line-height: 1.5;
   max-width: 42ch;
-  color: var(--ink-2);
+  color: var(--ink);
   margin: 0;
 }
 
-.title-slide .lede { color: #d7cbb8; }
+.title-slide .lede { color: #e7dccb; }
 
 .columns {
   display: grid;
@@ -118,14 +127,21 @@ h2 { font-size: clamp(2rem, 4.4vw, 3.2rem); max-width: 18ch; }
 }
 
 .card {
-  background: #faf7f2;
+  background: #fbf8f2;
   border: 1px solid var(--rule);
   padding: 1.15rem 1.1rem 1.2rem;
 }
 
-.card .num { font-family: var(--serif); color: var(--gold); margin-bottom: 0.4rem; }
-.card h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; margin: 0 0 0.45rem; }
-.card p { margin: 0; color: var(--ink-2); font-size: 0.95rem; line-height: 1.45; }
+.card .num {
+  font-family: var(--display);
+  letter-spacing: 0.12em;
+  color: var(--clay);
+  font-size: 0.78rem;
+  margin-bottom: 0.4rem;
+}
+
+.card h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; margin: 0 0 0.45rem; }
+.card p { margin: 0; color: var(--ink); font-size: 0.95rem; line-height: 1.45; }
 
 ul.plain {
   margin: 0;
@@ -146,6 +162,7 @@ ul.plain li:last-child { border-bottom: 0; }
   font-family: var(--serif);
   font-size: 2.4rem;
   margin: 0 0 0.3rem;
+  color: var(--ink-deep);
 }
 
 .foot {
@@ -155,16 +172,34 @@ ul.plain li:last-child { border-bottom: 0; }
   bottom: 1.4rem;
   display: flex;
   justify-content: space-between;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  font-family: var(--display);
   color: var(--muted);
 }
+
+.title-slide .foot { color: #c9bba8; }
 
 .ask {
   font-family: var(--serif);
   font-size: clamp(2.4rem, 5vw, 3.6rem);
   margin: 0.4rem 0 0.8rem;
+  color: var(--ink-deep);
+}
+
+.hero-art {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title-slide.has-art {
+  padding-right: 46%;
 }
 
 @media print {

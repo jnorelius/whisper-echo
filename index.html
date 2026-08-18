@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Whisper Echo — After two weeks, we stay</title>
+  <title>Whisper Echo — From tragedy to legacy</title>
   <meta name="description" content="Whisper Echo walks with widows, widowers, and children after a spouse or parent dies. We slow the crash, stay through the next season, and help a family keep the life they were already living." />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
@@ -16,12 +16,6 @@
 
   <header class="nav" data-nav>
     <a class="brand" href="#top">
-      <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-        <circle cx="16" cy="32" r="4.25" fill="currentColor"/>
-        <path d="M27 21.5c6.2 3.1 9.8 8.2 9.8 10.5s-3.6 7.4-9.8 10.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M35 14c9.4 4.8 15 12.4 15 18s-5.6 13.2-15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
-        <path d="M43 7c12.2 6.2 19.5 15.8 19.5 25S55.2 50.8 43 57" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
-      </svg>
       <span class="brand-name">Whisper Echo</span>
     </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-label="Open menu">Menu</button>
@@ -34,25 +28,26 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="wrap">
-        <p class="kicker">A California nonprofit</p>
-        <h1>After two weeks, most people go home.</h1>
-        <p class="lede">
-          Whisper Echo stays through the next season. We walk with widows, widowers,
-          and children after a spouse or parent dies — not as a replacement, but as
-          the village that slows the crash so a family can grieve and keep living.
-        </p>
-        <div class="actions">
-          <a class="btn btn-solid" href="#give">Help a family</a>
-          <a class="btn btn-ghost" href="#work">How we walk with them</a>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">From tragedy to legacy</p>
+          <h1>After two weeks, most people go home.</h1>
+          <p class="lede">
+            Whisper Echo stays through the next season. We walk with widows, widowers,
+            and children after a spouse or parent dies — not as a replacement, but as
+            the village that slows the crash so a family can grieve and keep living.
+          </p>
+          <div class="actions">
+            <a class="btn btn-solid" href="#give">Help a family</a>
+            <a class="btn btn-ghost" href="#work">How we walk with them</a>
+          </div>
         </div>
+        <img
+          class="hero-art"
+          src="assets/hero.jpg"
+          alt="Daisies growing from a sand dune beside a quiet shore"
+        />
       </div>
-      <svg class="hero-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-        <circle cx="16" cy="32" r="4.25" fill="currentColor"/>
-        <path d="M27 21.5c6.2 3.1 9.8 8.2 9.8 10.5s-3.6 7.4-9.8 10.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M35 14c9.4 4.8 15 12.4 15 18s-5.6 13.2-15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
-        <path d="M43 7c12.2 6.2 19.5 15.8 19.5 25S55.2 50.8 43 57" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
-      </svg>
     </section>
 
     <hr class="rule" />
@@ -79,7 +74,7 @@
     <section class="band band-ink" id="not">
       <div class="wrap split">
         <div>
-          <p class="kicker" style="color:#c4a574">What we will not become</p>
+          <p class="kicker" style="color:#c4a05a">What we will not become</p>
           <h2 class="section-title">We are not the missing spouse.</h2>
         </div>
         <div class="not-list">
@@ -170,19 +165,12 @@
           </div>
         </div>
         <div>
-          <p class="quote">
+          <img class="lockup" src="assets/lockup.png" alt="Whisper Echo" />
+          <p class="quote" style="margin-top:1.75rem">
             “Religion that God our Father accepts as pure and faultless is this:
             to look after orphans and widows in their distress.”
           </p>
           <p class="cite">James 1:27</p>
-          <p class="prose" style="margin-top:1.75rem">
-            <span class="muted">
-              Faith is the root. The work is practical. We are a registered nonprofit
-              in California, cleared to solicit charitable gifts, with bank accounts
-              open. We start with the family in front of us. Larger shelters and
-              campuses can wait. This cannot.
-            </span>
-          </p>
         </div>
       </div>
     </section>
@@ -224,8 +212,8 @@
 
   <footer class="footer">
     <div class="wrap footer-row">
-      <span>Whisper Echo</span>
-      <span>When everyone else has gone home.</span>
+      <span class="footer-name">Whisper Echo</span>
+      <span>From tragedy to legacy</span>
       <a href="deck.html">Pitch deck</a>
     </div>
   </footer>
