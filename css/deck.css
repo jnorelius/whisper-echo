@@ -188,20 +188,6 @@ ul.plain li:last-child { border-bottom: 0; }
   color: var(--ink-deep);
 }
 
-.hero-art {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 42%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.title-slide.has-art {
-  padding-right: 46%;
-}
-
 @media print {
   html, body { background: #fff; height: auto; }
   .chrome { display: none; }
