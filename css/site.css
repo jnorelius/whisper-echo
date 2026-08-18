@@ -31,7 +31,7 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation: none !important; transition: none !important; }
-  .landing-frame img { transform: none; }
+  .landing-frame video { transform: none; }
 }
 
 body {
@@ -144,18 +144,12 @@ button { font: inherit; }
   inset: 0;
 }
 
-.landing-frame img {
+.landing-frame video {
   width: 100%;
   height: 100%;
   max-width: none;
   object-fit: cover;
   object-position: center;
-  transform: scale(1.14);
-  animation: land-zoom 7.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-@keyframes land-zoom {
-  to { transform: scale(1); }
 }
 
 .landing-skip {

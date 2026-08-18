@@ -29,7 +29,17 @@
   <main id="main">
     <section class="landing" id="top" data-landing aria-label="Whisper Echo">
       <div class="landing-frame">
-        <img src="assets/field.jpg" alt="Whisper Echo — a hillside of flowers above a quiet ocean" />
+        <video
+          data-landing-video
+          autoplay
+          muted
+          playsinline
+          preload="auto"
+          poster="assets/field.jpg"
+          aria-hidden="true"
+        >
+          <source src="assets/landing.mp4" type="video/mp4" />
+        </video>
       </div>
       <a class="landing-skip" href="#intro">Continue</a>
     </section>

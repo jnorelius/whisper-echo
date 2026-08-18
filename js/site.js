@@ -16,6 +16,7 @@ document.querySelectorAll("[data-nav]").forEach((nav) => {
 const landing = document.querySelector("[data-landing]");
 const intro = document.querySelector("#intro");
 const nav = document.querySelector("[data-nav]");
+const video = document.querySelector("[data-landing-video]");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function setNavState() {
@@ -29,6 +30,11 @@ function setNavState() {
 setNavState();
 window.addEventListener("scroll", setNavState, { passive: true });
 
+if (reduceMotion && video) {
+  video.removeAttribute("autoplay");
+  video.pause();
+}
+
 if (landing && intro && !reduceMotion && window.scrollY < 40) {
   let cancelled = false;
   const cancel = () => {
@@ -40,8 +46,15 @@ if (landing && intro && !reduceMotion && window.scrollY < 40) {
   window.addEventListener("keydown", cancel, { once: true });
   document.querySelector(".landing-skip")?.addEventListener("click", cancel);
 
-  window.setTimeout(() => {
+  const dropToStory = () => {
     if (cancelled || window.scrollY > 40) return;
     intro.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, 7800);
+  };
+
+  if (video) {
+    video.addEventListener("ended", dropToStory);
+    video.addEventListener("error", dropToStory);
+  } else {
+    window.setTimeout(dropToStory, 7800);
+  }
 }
