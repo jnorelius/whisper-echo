@@ -1,19 +1,18 @@
 :root {
-  --paper: #faf3e8;
-  --paper-2: #ebe4d5;
-  --ink: #4a4038;
-  --ink-deep: #3a322c;
-  --muted: #7d7368;
-  --rule: #d8ccbb;
-  --clay: #c47b4a;
-  --clay-2: #a8653c;
-  --rose: #c9899a;
-  --gold: #d4b06a;
-  --sage: #8a8968;
-  --sea: #7a919c;
-  --sea-deep: #4a5f68;
-  --white: #f7f1e4;
-  --display: "Cinzel", "Times New Roman", serif;
+  --paper: #f8f0e4;
+  --paper-2: #efe4d4;
+  --ink: #6d655e;
+  --ink-deep: #534c46;
+  --muted: #8a8178;
+  --rule: #e4d8c8;
+  --clay: #c9846a;
+  --clay-2: #b06d56;
+  --rose: #c48b90;
+  --gold: #d9b17a;
+  --sage: #8f917c;
+  --sea: #9aadb4;
+  --sea-deep: #5c6d74;
+  --white: #fbf6ee;
   --serif: "Cormorant Garamond", "Iowan Old Style", Palatino, serif;
   --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
   --measure: 68ch;
@@ -32,6 +31,7 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation: none !important; transition: none !important; }
+  .hero::before { opacity: 0.35; }
 }
 
 body {
@@ -84,11 +84,10 @@ button { font: inherit; }
 }
 
 .brand-name {
-  font-family: var(--display);
-  font-size: 0.86rem;
+  font-family: var(--serif);
+  font-size: 1.4rem;
   font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .nav-links {
@@ -125,7 +124,24 @@ button { font: inherit; }
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: clamp(3.5rem, 10vw, 7.5rem) 0 clamp(4rem, 9vw, 6.5rem);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(105deg, var(--paper) 0 42%, color-mix(in srgb, var(--paper) 70%, transparent) 62%, color-mix(in srgb, var(--paper) 18%, transparent) 100%),
+    url("../assets/field.jpg") 82% 12% / cover no-repeat;
+  pointer-events: none;
+}
+
+.hero .wrap {
+  position: relative;
+  z-index: 1;
 }
 
 .kicker {
@@ -187,6 +203,20 @@ button { font: inherit; }
 .btn-ghost:hover {
   background: var(--ink-deep);
   color: var(--paper);
+}
+
+.vista {
+  margin: 0;
+  height: min(56vh, 480px);
+  overflow: hidden;
+  background: var(--paper-2);
+}
+
+.vista img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
 }
 
 .rule {
@@ -254,10 +284,11 @@ button { font: inherit; }
 }
 
 .season .num {
-  font-family: var(--display);
-  letter-spacing: 0.12em;
-  color: var(--gold);
-  font-size: 0.78rem;
+  font-family: var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose);
+  font-size: 0.72rem;
   margin-bottom: 0.85rem;
 }
 
@@ -307,7 +338,7 @@ button { font: inherit; }
 }
 
 .cite {
-  font-family: var(--display);
+  font-family: var(--sans);
   font-size: 0.72rem;
   color: var(--rose);
   letter-spacing: 0.14em;
@@ -334,7 +365,7 @@ button { font: inherit; }
   color: var(--ink-deep);
   display: block;
   margin-bottom: 0.2rem;
-  font-family: var(--display);
+  font-family: var(--sans);
   font-size: 0.7rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -356,10 +387,9 @@ button { font: inherit; }
 }
 
 .footer-name {
-  font-family: var(--display);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-size: 0.72rem;
+  font-family: var(--serif);
+  letter-spacing: 0.04em;
+  font-size: 1.15rem;
   color: var(--ink-deep);
 }
 
