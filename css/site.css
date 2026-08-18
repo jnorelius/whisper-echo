@@ -87,15 +87,18 @@ button { font: inherit; }
 }
 
 .brand {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: var(--ink-deep);
 }
 
-.brand-name {
-  font-family: var(--serif);
-  font-size: 1.4rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+.brand-mark {
+  display: block;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--paper);
 }
 
 .nav-links {
@@ -398,14 +401,15 @@ button { font: inherit; }
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
 }
 
-.footer-name {
-  font-family: var(--serif);
-  letter-spacing: 0.04em;
-  font-size: 1.15rem;
-  color: var(--ink-deep);
+.footer-mark img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .footer a { color: var(--ink); }

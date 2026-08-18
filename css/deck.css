@@ -49,6 +49,15 @@ html, body {
   text-decoration: none;
 }
 
+.chrome-brand img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--paper);
+}
+
 .chrome button {
   border: 1px solid #6d7f86;
   padding: 0.3rem 0.65rem;
