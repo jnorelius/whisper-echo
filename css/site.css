@@ -31,7 +31,7 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation: none !important; transition: none !important; }
-  .hero::before { opacity: 0.35; }
+  .landing-frame img { transform: none; }
 }
 
 body {
@@ -65,17 +65,25 @@ button { font: inherit; }
 }
 
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: 0.95rem var(--pad);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+}
+
+.nav.is-solid {
   background: color-mix(in srgb, var(--paper) 90%, transparent);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid color-mix(in srgb, var(--rule) 80%, transparent);
+  border-bottom-color: color-mix(in srgb, var(--rule) 80%, transparent);
 }
 
 .brand {
@@ -123,25 +131,52 @@ button { font: inherit; }
   cursor: pointer;
 }
 
-.hero {
+.landing {
   position: relative;
+  height: 100dvh;
+  min-height: 28rem;
   overflow: hidden;
-  padding: clamp(3.5rem, 10vw, 7.5rem) 0 clamp(4rem, 9vw, 6.5rem);
+  background: var(--paper-2);
 }
 
-.hero::before {
-  content: "";
+.landing-frame {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(105deg, var(--paper) 0 42%, color-mix(in srgb, var(--paper) 70%, transparent) 62%, color-mix(in srgb, var(--paper) 18%, transparent) 100%),
-    url("../assets/field.jpg") 82% 12% / cover no-repeat;
-  pointer-events: none;
 }
 
-.hero .wrap {
-  position: relative;
-  z-index: 1;
+.landing-frame img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.14);
+  animation: land-zoom 7.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes land-zoom {
+  to { transform: scale(1); }
+}
+
+.landing-skip {
+  position: absolute;
+  left: 50%;
+  bottom: 1.6rem;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: var(--ink-deep);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--paper) 72%, transparent);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+}
+
+.hero {
+  padding: clamp(5.5rem, 12vw, 8rem) 0 clamp(4rem, 9vw, 6.5rem);
+  scroll-margin-top: 0;
 }
 
 .kicker {
@@ -203,20 +238,6 @@ button { font: inherit; }
 .btn-ghost:hover {
   background: var(--ink-deep);
   color: var(--paper);
-}
-
-.vista {
-  margin: 0;
-  height: min(56vh, 480px);
-  overflow: hidden;
-  background: var(--paper-2);
-}
-
-.vista img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 42%;
 }
 
 .rule {
