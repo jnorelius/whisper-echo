@@ -1,16 +1,18 @@
 :root {
-  --paper: #f7f1e6;
-  --paper-2: #efe6d6;
-  --ink: #3f3830;
-  --ink-deep: #2c2621;
-  --muted: #7a7166;
-  --rule: #e0d5c4;
-  --clay: #c46a45;
-  --clay-2: #a35332;
-  --rose: #c9888c;
-  --gold: #c4a05a;
-  --sea: #5e7f82;
-  --white: #fbf8f2;
+  --paper: #faf3e8;
+  --paper-2: #ebe4d5;
+  --ink: #4a4038;
+  --ink-deep: #3a322c;
+  --muted: #7d7368;
+  --rule: #d8ccbb;
+  --clay: #c47b4a;
+  --clay-2: #a8653c;
+  --rose: #c9899a;
+  --gold: #d4b06a;
+  --sage: #8a8968;
+  --sea: #7a919c;
+  --sea-deep: #4a5f68;
+  --white: #f7f1e4;
   --display: "Cinzel", "Times New Roman", serif;
   --serif: "Cormorant Garamond", "Iowan Old Style", Palatino, serif;
   --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
@@ -199,7 +201,7 @@ button { font: inherit; }
 }
 
 .band-ink {
-  background: #3a342c;
+  background: var(--sea-deep);
   color: var(--paper);
 }
 
@@ -254,7 +256,7 @@ button { font: inherit; }
 .season .num {
   font-family: var(--display);
   letter-spacing: 0.12em;
-  color: var(--clay);
+  color: var(--gold);
   font-size: 0.78rem;
   margin-bottom: 0.85rem;
 }
@@ -307,7 +309,7 @@ button { font: inherit; }
 .cite {
   font-family: var(--display);
   font-size: 0.72rem;
-  color: var(--clay);
+  color: var(--rose);
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
