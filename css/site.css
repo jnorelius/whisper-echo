@@ -1,18 +1,18 @@
 :root {
-  --paper: #f8f0e4;
-  --paper-2: #efe4d4;
-  --ink: #6d655e;
-  --ink-deep: #534c46;
-  --muted: #8a8178;
-  --rule: #e4d8c8;
-  --clay: #c9846a;
-  --clay-2: #b06d56;
-  --rose: #c48b90;
-  --gold: #d9b17a;
+  --paper: #f7f2ea;
+  --paper-2: #efe6dc;
+  --ink: #4a4254;
+  --ink-deep: #2e1a47;
+  --muted: #7d7386;
+  --rule: #e6dce3;
+  --clay: #e08a4f;
+  --clay-2: #c46d38;
+  --rose: #d97a9a;
+  --gold: #e89c66;
   --sage: #8f917c;
-  --sea: #9aadb4;
-  --sea-deep: #5c6d74;
-  --white: #fbf6ee;
+  --sea: #9b86b3;
+  --sea-deep: #2e1a47;
+  --white: #fbf7f2;
   --serif: "Cormorant Garamond", "Iowan Old Style", Palatino, serif;
   --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
   --measure: 68ch;
@@ -117,7 +117,7 @@ button { font: inherit; }
   color: var(--ink);
 }
 
-.nav-links a:hover { color: var(--clay); }
+.nav-links a:hover { color: var(--ink-deep); }
 
 .nav-links .give {
   background: var(--clay);
@@ -299,6 +299,7 @@ button { font: inherit; }
 .season {
   background: var(--white);
   border: 1px solid var(--rule);
+  border-top: 3px solid var(--gold);
   padding: 1.5rem 1.4rem 1.6rem;
 }
 
@@ -370,6 +371,7 @@ button { font: inherit; }
   gap: 2rem;
   background: var(--white);
   border: 1px solid var(--rule);
+  border-top: 3px solid var(--ink-deep);
   padding: clamp(1.5rem, 4vw, 2.5rem);
 }
 

@@ -1,14 +1,14 @@
 :root {
-  --paper: #f8f0e4;
-  --ink: #6d655e;
-  --ink-deep: #534c46;
-  --muted: #8a8178;
-  --rule: #e4d8c8;
-  --clay: #c9846a;
-  --gold: #d9b17a;
-  --rose: #c48b90;
-  --sea: #9aadb4;
-  --sea-deep: #5c6d74;
+  --paper: #f7f2ea;
+  --ink: #4a4254;
+  --ink-deep: #2e1a47;
+  --muted: #7d7386;
+  --rule: #e6dce3;
+  --clay: #e08a4f;
+  --gold: #e89c66;
+  --rose: #d97a9a;
+  --sea: #9b86b3;
+  --sea-deep: #2e1a47;
   --serif: "Cormorant Garamond", Palatino, serif;
   --sans: "Outfit", "Avenir Next", sans-serif;
 }
@@ -33,7 +33,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem 1rem;
-  color: #e8efe8;
+  color: #f3e8dc;
   font-size: 0.78rem;
   letter-spacing: 0.04em;
   text-transform: none;
@@ -59,7 +59,7 @@ html, body {
 }
 
 .chrome button {
-  border: 1px solid #6d7f86;
+  border: 1px solid #c9a06a;
   padding: 0.3rem 0.65rem;
   border-radius: 999px;
   letter-spacing: 0.06em;
@@ -86,7 +86,7 @@ html, body {
 
 .slide.title-slide {
   background:
-    linear-gradient(105deg, rgba(92, 109, 116, 0.82) 0 46%, rgba(92, 109, 116, 0.55) 100%),
+    linear-gradient(105deg, rgba(46, 26, 71, 0.84) 0 46%, rgba(46, 26, 71, 0.58) 100%),
     url("../assets/field.jpg") 70% 30% / cover no-repeat;
   color: var(--paper);
 }
@@ -123,7 +123,7 @@ h2 { font-size: clamp(2rem, 4.4vw, 3.2rem); max-width: 18ch; }
   margin: 0;
 }
 
-.title-slide .lede { color: #d5e0e4; }
+.title-slide .lede { color: #f0e4d6; }
 
 .columns {
   display: grid;
@@ -140,7 +140,7 @@ h2 { font-size: clamp(2rem, 4.4vw, 3.2rem); max-width: 18ch; }
 }
 
 .card {
-  background: #f7f1e4;
+  background: #fbf7f2;
   border: 1px solid var(--rule);
   padding: 1.15rem 1.1rem 1.2rem;
 }
@@ -192,7 +192,7 @@ ul.plain li:last-child { border-bottom: 0; }
   color: var(--muted);
 }
 
-.title-slide .foot { color: #b7c6cc; }
+.title-slide .foot { color: #e0c8b0; }
 
 .ask {
   font-family: var(--serif);
