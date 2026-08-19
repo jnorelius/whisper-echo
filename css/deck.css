@@ -108,10 +108,11 @@ html, body {
 
 .slide-photo {
   position: absolute;
-  right: 3.6rem;
   top: 50%;
+  left: 48%;
+  right: auto;
   transform: translateY(-50%);
-  width: min(38%, 22rem);
+  width: min(42%, 24rem);
   height: auto;
   pointer-events: none;
 }
