@@ -58,13 +58,31 @@ html, body {
   background: var(--paper);
 }
 
+.chrome-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--ink-deep);
+  color: var(--paper);
+  padding: 0.28rem 0.32rem 0.28rem 0.8rem;
+  border-radius: 999px;
+  font-family: var(--sans);
+  letter-spacing: 0.04em;
+}
+
 .chrome button {
-  border: 1px solid #c9a06a;
-  padding: 0.3rem 0.65rem;
+  background: var(--clay);
+  color: #fbf7f2;
+  border: 0;
+  padding: 0.35rem 0.75rem;
   border-radius: 999px;
   letter-spacing: 0.06em;
   font-family: var(--sans);
   text-transform: none;
+}
+
+.chrome button:hover {
+  background: var(--gold);
 }
 
 .deck {
