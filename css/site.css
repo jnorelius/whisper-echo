@@ -177,6 +177,23 @@ button { font: inherit; }
   scroll-margin-top: 0;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1.75rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.hero-art {
+  margin: 0;
+}
+
+.hero-art img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 .kicker {
   display: inline-block;
   font-size: 0.74rem;
@@ -454,7 +471,8 @@ button { font: inherit; }
   .seasons,
   .story-grid,
   .who-grid,
-  .give-box {
+  .give-box,
+  .hero-grid {
     grid-template-columns: 1fr;
   }
 }
