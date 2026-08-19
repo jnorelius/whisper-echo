@@ -365,6 +365,23 @@ button { font: inherit; }
   text-transform: uppercase;
 }
 
+.who-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.who-photo {
+  margin: 0;
+}
+
+.who-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 .give-box {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -436,6 +453,7 @@ button { font: inherit; }
   .split,
   .seasons,
   .story-grid,
+  .who-grid,
   .give-box {
     grid-template-columns: 1fr;
   }
