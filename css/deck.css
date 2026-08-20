@@ -117,6 +117,19 @@ html, body {
   pointer-events: none;
 }
 
+.slide-seal {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translateY(-50%);
+  width: min(34%, 18rem);
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--paper);
+  pointer-events: none;
+}
+
 .slide.title-slide {
   background:
     linear-gradient(105deg, rgba(46, 26, 71, 0.84) 0 46%, rgba(46, 26, 71, 0.58) 100%),
