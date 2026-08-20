@@ -112,7 +112,7 @@ html, body {
   left: 48%;
   right: auto;
   transform: translateY(-50%);
-  width: min(42%, 24rem);
+  width: min(44.5%, 25.4rem);
   height: auto;
   pointer-events: none;
 }
