@@ -119,11 +119,11 @@ html, body {
 
 .slide-seal {
   position: absolute;
-  top: 58%;
+  top: 54%;
   left: 52%;
   transform: translateY(-50%);
-  width: 18.5rem;
-  height: 18.5rem;
+  width: 19.1rem;
+  height: 19.1rem;
   border-radius: 50%;
   overflow: hidden;
   background: var(--paper);
