@@ -138,6 +138,16 @@ html, body {
   border-radius: 50%;
 }
 
+.slide.ask-slide.active {
+  justify-content: flex-start;
+  padding-top: 5.5rem;
+}
+
+.ask-slide .slide-seal {
+  top: 5.5rem;
+  transform: none;
+}
+
 .slide.title-slide {
   background:
     linear-gradient(105deg, rgba(46, 26, 71, 0.84) 0 46%, rgba(46, 26, 71, 0.58) 100%),
