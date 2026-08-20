@@ -122,8 +122,8 @@ html, body {
   top: 50%;
   left: 52%;
   transform: translateY(-50%);
-  width: min(34%, 18rem);
-  height: auto;
+  width: 18rem;
+  height: 18rem;
   border-radius: 50%;
   object-fit: cover;
   background: var(--paper);
