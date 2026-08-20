@@ -140,11 +140,11 @@ html, body {
 
 .slide.ask-slide.active {
   justify-content: flex-start;
-  padding-top: 5.5rem;
+  padding-top: 8.5rem;
 }
 
 .ask-slide .slide-seal {
-  top: 5.5rem;
+  top: 8.5rem;
   transform: none;
 }
 
