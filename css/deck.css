@@ -256,19 +256,42 @@ ul.plain li:last-child { border-bottom: 0; }
 }
 
 @media print {
-  html, body { background: #fff; height: auto; }
-  .chrome { display: none; }
-  .deck { overflow: visible; height: auto; }
+  html, body {
+    background: #fff;
+    height: auto;
+    overflow: visible;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .chrome { display: none !important; }
+  .deck {
+    display: block;
+    overflow: visible;
+    height: auto;
+  }
   .slide,
   .slide[hidden] {
     display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: stretch !important;
     width: 13.333in;
     height: 7.5in;
     margin: 0;
+    overflow: hidden;
     page-break-after: always;
     break-after: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
-  .slide:last-child { page-break-after: auto; }
+  .slide:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+  h1 { font-size: 3.6rem; }
+  h2 { font-size: 2.7rem; }
 }
 
 @page {
