@@ -516,6 +516,22 @@ button { font: inherit; }
   max-width: 52ch;
 }
 
+.help-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+  max-width: 52ch;
+}
+
+.help-block h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  color: var(--ink-deep);
+  margin: 0 0 0.85rem;
+}
+
 @media (max-width: 860px) {
   .menu-btn { display: inline-flex; }
   .nav-links {
