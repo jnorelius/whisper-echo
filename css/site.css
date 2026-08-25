@@ -474,6 +474,48 @@ button { font: inherit; }
 
 .footer-legal p:last-child { margin-bottom: 0; }
 
+.page-inner .nav {
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom-color: color-mix(in srgb, var(--rule) 80%, transparent);
+}
+
+.page-inner main {
+  padding-top: 7.5rem;
+}
+
+.help-list {
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.help-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+  max-width: 52ch;
+}
+
+.help-list li:last-child { border-bottom: 0; }
+
+.help-list strong {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--clay);
+  margin-bottom: 0.25rem;
+}
+
+.help-urgent {
+  margin-top: 2rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+  max-width: 52ch;
+}
+
 @media (max-width: 860px) {
   .menu-btn { display: inline-flex; }
   .nav-links {
