@@ -461,6 +461,19 @@ button { font: inherit; }
 
 .footer a { color: var(--ink); }
 
+.footer-legal {
+  margin-top: 1.35rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.footer-legal p { margin: 0 0 0.3rem; }
+
+.footer-legal p:last-child { margin-bottom: 0; }
+
 @media (max-width: 860px) {
   .menu-btn { display: inline-flex; }
   .nav-links {
