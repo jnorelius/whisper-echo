@@ -119,6 +119,19 @@ button { font: inherit; }
 
 .nav-links a:hover { color: var(--ink-deep); }
 
+.nav-links .need {
+  border: 1px solid var(--ink-deep);
+  color: var(--ink-deep) !important;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--paper) 78%, transparent);
+}
+
+.nav-links .need:hover {
+  background: var(--ink-deep);
+  color: var(--paper) !important;
+}
+
 .nav-links .give {
   background: var(--clay);
   color: var(--white) !important;
