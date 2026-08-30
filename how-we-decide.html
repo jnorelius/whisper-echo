@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How Whisper Echo decides</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/vetting.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <img src="assets/logo.png" width="56" height="56" alt="Whisper Echo" />
+      <div class="top-actions no-print">
+        <a class="btn" href="index.html">Site</a>
+        <button class="btn btn-solid" type="button" data-print>Save PDF</button>
+      </div>
+    </div>
+
+    <p class="notice no-print">
+      This is internal. Families do not fill this out. It is not an application.
+      After you have spoken with a family, complete the record below and Save PDF
+      into a private folder. Refresh this page before the next family.
+    </p>
+
+    <p class="kicker">For the file and for fiduciaries</p>
+    <h1>How Whisper Echo decides.</h1>
+    <div class="prose">
+      <p>
+        We do not use a public application. A form on the internet turns this
+        into a benefit program. Whisper Echo walks with a small number of
+        families. A person decides that, after a conversation.
+      </p>
+      <p>
+        When someone asks whether a family “filled out a form,” the answer is
+        no. We sat with them. Then we wrote down what we heard and what we
+        decided. That writing is this record.
+      </p>
+    </div>
+    <ol class="steps">
+      <li>
+        <strong>Someone makes us aware</strong>
+        A family writes, or a pastor, neighbor, or friend does. We do not
+        arrive uninvited. If the family does not know we were contacted, we
+        do not show up.
+      </li>
+      <li>
+        <strong>A person answers</strong>
+        The first note only needs a name, a way to reach them, and which
+        season they are in. They do not have to tell the whole story.
+      </li>
+      <li>
+        <strong>We sit with it</strong>
+        Jordan or Kelly speaks with them. We are listening for a household
+        that lost a spouse or parent, a season they are already in, and a
+        gap we can actually close. We are not the missing spouse. We are
+        not emergency services. If someone is in immediate danger, that is
+        911.
+      </li>
+      <li>
+        <strong>We decide honestly</strong>
+        Walk with them now, not now, or no. We will say so. We do not take
+        on more families than we can stay with.
+      </li>
+      <li>
+        <strong>We write it down</strong>
+        After that conversation, Whisper Echo completes the Family walk
+        record. The family does not apply by filling it. We keep the PDF
+        in a private file.
+      </li>
+    </ol>
+
+    <form class="sheet" autocomplete="off">
+      <p class="kicker">Family walk record</p>
+      <h2>Completed by Whisper Echo after we have spoken.</h2>
+      <p class="prose">Whisper Echo · EIN 33-4405419 · California 501(c)(3)</p>
+
+      <div class="grid">
+        <div class="field">
+          <label for="record-date">Date of this record</label>
+          <input id="record-date" name="record-date" type="date" />
+        </div>
+        <div class="field">
+          <label for="completed-by">Completed by</label>
+          <input id="completed-by" name="completed-by" type="text" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>How we heard</label>
+        <div class="choices">
+          <label><input type="checkbox" name="heard" value="family" /> The family wrote</label>
+          <label><input type="checkbox" name="heard" value="pastor" /> Pastor</label>
+          <label><input type="checkbox" name="heard" value="neighbor" /> Neighbor or friend</label>
+          <label><input type="checkbox" name="heard" value="other" /> Other</label>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="referrer">If someone else wrote, their name</label>
+          <input id="referrer" name="referrer" type="text" />
+        </div>
+        <div class="field">
+          <label>Does the family know we were contacted?</label>
+          <div class="choices">
+            <label><input type="radio" name="knows" value="yes" /> Yes</label>
+            <label><input type="radio" name="knows" value="no" /> No — do not arrive</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="parent">Surviving parent or guardian</label>
+          <input id="parent" name="parent" type="text" />
+        </div>
+        <div class="field">
+          <label for="city">City</label>
+          <input id="city" name="city" type="text" />
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" />
+        </div>
+        <div class="field">
+          <label for="loss">When the spouse or parent died</label>
+          <input id="loss" name="loss" type="text" placeholder="Month and year is enough" />
+        </div>
+        <div class="field">
+          <label for="children">Children in the home</label>
+          <input id="children" name="children" type="text" placeholder="First names and ages" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Season they are in</label>
+        <div class="choices">
+          <label><input type="checkbox" name="season" value="first" /> The first days</label>
+          <label><input type="checkbox" name="season" value="this" /> This season</label>
+          <label><input type="checkbox" name="season" value="lasting" /> The lasting piece</label>
+        </div>
+      </div>
+
+      <div class="field span">
+        <label for="gap">The gap we can help close</label>
+        <textarea id="gap" name="gap"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Decision</label>
+        <div class="choices">
+          <label><input type="radio" name="decision" value="walk" /> Walk with this family</label>
+          <label><input type="radio" name="decision" value="later" /> Not now</label>
+          <label><input type="radio" name="decision" value="no" /> No</label>
+        </div>
+      </div>
+
+      <div class="field span">
+        <label for="reason">Why, and what we offered if we are walking</label>
+        <textarea id="reason" name="reason"></textarea>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="follow-up">Follow up by</label>
+          <input id="follow-up" name="follow-up" type="date" />
+        </div>
+        <div class="field">
+          <label for="notes">Anything else for the file</label>
+          <input id="notes" name="notes" type="text" />
+        </div>
+      </div>
+
+      <p class="fine">
+        Keep this PDF private. Do not put a completed record on the website
+        or in email you would not want forwarded. Whisper Echo does not give
+        legal advice. We pay vetted attorneys. If someone is in immediate
+        danger, call 911.
+      </p>
+    </form>
+  </div>
+  <script>
+    document.querySelector("[data-print]")?.addEventListener("click", () => window.print());
+  </script>
+</body>
+</html>
